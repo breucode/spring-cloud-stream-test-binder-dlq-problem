@@ -5,13 +5,5 @@ spring:
     stream:
       bindings:
         processFile-in-0:
-          destination: example.file.uploaded
-          group: demogroup
           consumer:
             max-attempts: 1
-      rabbit:
-        bindings:
-          processFile-in-0:
-            consumer:
-              bindingRoutingKey: demoRoutingKey
-              auto-bind-dlq: true
